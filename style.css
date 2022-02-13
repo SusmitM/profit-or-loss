@@ -9,3 +9,21 @@ label{
     padding: 0.5rem 1rem 0.5rem 1rem;
     margin: 1.5rem;
 }
+
+.fsection {
+    position: absolute;
+    width: 100%;
+    bottom: -19px;
+    font-size: 2.95vh;
+    font-weight: 400;
+    padding: 0rem 0rem 3rem 0rem;
+  
+  }
+  
+  .icons {
+    font-size: 4.5vh;
+    display: inline;
+    padding: 0.1rem 2rem 0.5rem;
+    cursor: pointer;
+  
+  }

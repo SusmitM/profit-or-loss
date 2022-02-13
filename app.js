@@ -1,7 +1,9 @@
 var initialPrice=document.querySelector("#initial-price").value;
 var quantity=document.querySelector("#quantity").value;
 var currentPrice=document.querySelector("#current-price").value;
+var output=document.querySelector("#output");
 const btnSubmit=document.querySelector("#submitBtn");
+
 
 function clickHandler(){
     var spending= investment(initialPrice,quantity);
@@ -12,11 +14,11 @@ function clickHandler(){
         console.log(result);
         if(result>0){
             var profitPercent=result/initialPrice * 100;
-            console.log(`Hey, the profit is ${result} and the percent is ${profitPercent}%`);
+            output.innerText=`Hey, the profit is ${result} and the percent is ${profitPercent}%`;
         }
         else{
             var lossPercent=result/initialPrice * 100;
-            console.log(`Hey, the loss is ${Math.abs(result)} and the percent is ${Math.abs(lossPercent)}%`);
+            output.innerText=`Hey, the loss is ${Math.abs(result)} and the percent is ${Math.abs(lossPercent)}%`;
 
         }
        
