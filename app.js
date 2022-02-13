@@ -11,14 +11,13 @@ function clickHandler(){
     
     if (initialPrice !== '' && quantity !== '' && currentPrice !== ''){
         var result=afterPrice-spending;
-        console.log(result);
         if(result>0){
-            var profitPercent=result/initialPrice * 100;
-            output.innerText=`Hey, the profit is ${result} and the percent is ${profitPercent}%`;
+            var profitPercent=result/spending * 100;
+            output.innerText=`Hey, the profit is ${result} and the percent is ${profitPercent.toFixed(2)}%`;
         }
         else{
-            var lossPercent=result/initialPrice * 100;
-            output.innerText=`Hey, the loss is ${Math.abs(result)} and the percent is ${Math.abs(lossPercent)}%`;
+            var lossPercent=result/spending * 100;
+            output.innerText=`Hey, the loss is ${Math.abs(result)} and the percent is ${Math.abs(lossPercent.toFixed(2))}%`;
 
         }
        
