@@ -5,6 +5,7 @@ var output=document.querySelector("#output");
 const btnSubmit=document.querySelector("#submitBtn");
 
 
+
 function clickHandler(){
     var spending= investment(initialPrice,quantity);
     var afterPrice= outcome(currentPrice,quantity);
@@ -39,4 +40,7 @@ function outcome(currentPrice,quantity){
 }
 
 
+
+
 btnSubmit.addEventListener("click",clickHandler);
+setTimeout(click,5000);
