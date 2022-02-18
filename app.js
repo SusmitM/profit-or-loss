@@ -12,10 +12,12 @@ function clickHandler(){
     if (initialPrice !== '' && quantity !== '' && currentPrice !== ''){
         var result=afterPrice-spending;
         if(result>0){
+            output.style.color="green";
             var profitPercent=result/spending * 100;
             output.innerText=`Hey, the profit is ${result} and the percent is ${profitPercent.toFixed(2)}%`;
         }
         else{
+            output.style.color="red";
             var lossPercent=result/spending * 100;
             output.innerText=`Hey, the loss is ${Math.abs(result)} and the percent is ${Math.abs(lossPercent.toFixed(2))}%`;
 
