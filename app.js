@@ -43,4 +43,4 @@ function outcome(currentPrice,quantity){
 
 
 btnSubmit.addEventListener("click",clickHandler);
-setTimeout(click,5000);
+
