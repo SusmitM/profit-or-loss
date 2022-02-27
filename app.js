@@ -1,6 +1,6 @@
-var initialPrice=document.querySelector("#initial-price").value;
-var quantity=document.querySelector("#quantity").value;
-var currentPrice=document.querySelector("#current-price").value;
+var initialPrice=document.querySelector("#initial-price");
+var quantity=document.querySelector("#quantity");
+var currentPrice=document.querySelector("#current-price");
 var output=document.querySelector("#output");
 const btnSubmit=document.querySelector("#submitBtn");
 
@@ -10,26 +10,27 @@ function calculateProfitAndLoss(initialPrice,quantity,currentPrice){
         var loss= (initialPrice-currentPrice)*quantity;
          var lossPercent= (loss/initialPrice)*100;
          output.style.color="red";
-         output.innerText=`Hey, the loss is ${Math.abs(loss)} and the percent is ${lossPercent.toFixed(2)}%`;
+         output.innerHTML=`Hey, the loss is ${Math.abs(loss)} and the percent is ${lossPercent.toFixed(2)}%`;
 
     }
     else if(currentPrice>initialPrice){
         var profit= (currentPrice-initialPrice)*quantity;
          var profitPercent= (profit/initialPrice)*100;
          output.style.color="green";
-         output.innerText=`Hey, the profit is ${profit} and the percent is ${profitPercent.toFixed(2)}%`;
+         output.innerHTML=`Hey, the profit is ${profit} and the percent is ${profitPercent.toFixed(2)}%`;
 
     }
-    else if(currentPrice=initialPrice){
-        output.innerText=`Hey, you have neither made a profit nor a loss.`;
+    else{
+        output.style.color="black";
+        output.innerHTML=`Hey, you have neither made a profit nor a loss.`;
 
     }
 
 }
 function clickHandler(){
-    var ip= Number(initialPrice);
-    var qty= Number(quantity);
-    var cp= Number(currentPrice);
+    var ip= Number(initialPrice.value);
+    var qty= Number(quantity.value);
+    var cp= Number(currentPrice.value);
     calculateProfitAndLoss(ip, qty, cp);
 }
 
