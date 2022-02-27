@@ -20,7 +20,7 @@ function calculateProfitAndLoss(initialPrice,quantity,currentPrice){
          output.innerText=`Hey, the profit is ${profit} and the percent is ${profitPercent.toFixed(2)}%`;
 
     }
-    else{
+    else if(currentPrice=initialPrice){
         output.innerText=`Hey, you have neither made a profit nor a loss.`;
 
     }
