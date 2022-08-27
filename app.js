@@ -28,10 +28,17 @@ function calculateProfitAndLoss(initialPrice,quantity,currentPrice){
 
 }
 function clickHandler(){
-    var ip= Number(initialPrice.value);
-    var qty= Number(quantity.value);
-    var cp= Number(currentPrice.value);
-    calculateProfitAndLoss(ip, qty, cp);
+    if(initialPrice.value=="" || quantity.value=="" || currentPrice.value=="" ){
+        output.innerText = "Invalid Inputs"
+    }
+    else{
+        var ip= Number(initialPrice.value);
+        var qty= Number(quantity.value);
+        var cp= Number(currentPrice.value);
+        calculateProfitAndLoss(ip, qty, cp);
+
+    }
+   
 }
 
 btnSubmit.addEventListener("click",clickHandler);
