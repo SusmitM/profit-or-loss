@@ -29,7 +29,7 @@ function calculateProfitAndLoss(initialPrice,quantity,currentPrice){
 }
 function clickHandler(){
     if(initialPrice.value=="" || quantity.value=="" || currentPrice.value=="" ){
-        output.innerText = "Invalid Inputs"
+        output.innerText = "Enter all the fields"
     }
     else{
         var ip= Number(initialPrice.value);
