@@ -31,6 +31,9 @@ function clickHandler(){
     if(initialPrice.value=="" || quantity.value=="" || currentPrice.value=="" ){
         output.innerText = "Enter all the fields"
     }
+    else if(initialPrice.value < 0 || quantity.value < 0 || currentPrice.value < 0 ){
+        output.innerText = "Enter positive field values"
+    }
     else{
         var ip= Number(initialPrice.value);
         var qty= Number(quantity.value);
